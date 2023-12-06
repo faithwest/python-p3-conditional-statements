@@ -1,21 +1,20 @@
 # control_flow.py
 
 def admin_login(username, password):
-    if username.upper() == "ADMIN" and password == "12345":
+    if username.lower() == "AD" and password == 12345:
         return "Access granted"
     else:
         return "Access denied"
 
 def hows_the_weather(temperature):
-    if temperature > 85:
-        return "It's too dang hot out there!"
-    elif 40 <= temperature <= 65:
+    if temperature <= 32:
+        return "It's brisk out there"
+    elif 32 < temperature <= 50:
         return "It's a little chilly out there!"
-    elif temperature < 40:
-        return "It's brisk out there!"
-
-    return "It's perfect out there!"
-
+    elif 50 < temperature <= 80:
+        return "It's perfect out there!"
+    else:
+        return "It's too dang hot out there!"
 
 def fizzbuzz(num):
     if num % 3 == 0 and num % 5 == 0:
